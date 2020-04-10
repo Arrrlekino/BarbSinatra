@@ -1,2 +1,4 @@
 
 barbershop.db
+db/migrate/20200403232429_create_barbers.rb
+db/schema.rb
