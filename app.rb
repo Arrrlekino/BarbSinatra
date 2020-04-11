@@ -34,9 +34,11 @@ get '/visit' do
 end
 post '/visit' do
 	c = Client.new params[:client]
-	c.save
-
-erb "<h2>Thanks!</h2>"	
+	if c.save
+erb "<h2>Thanks!</h2>"
+else
+erb "<h2>Sorry! There mistake ;-(</h2>"
+	end	
 end
 get '/barber/:id' do
 	@barber = Barber.find(params[:id])
