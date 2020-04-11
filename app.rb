@@ -37,7 +37,11 @@ post '/visit' do
 	if c.save
 erb "<h2>Thanks!</h2>"
 else
-erb "<h2>Sorry! There mistake ;-(</h2>"
+# First variant	
+#erb "<h2>Sorry! There mistake ;-(</h2>"
+# Second variant:
+	@error = c.errors.full_messages.first
+	erb :visit
 	end	
 end
 get '/barber/:id' do
