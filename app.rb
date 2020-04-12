@@ -50,7 +50,7 @@ get '/barber/:id' do
 end
 
 get '/bookings' do
-#вывод в прямом порядке @client = Client.all
+#вывод в прямом порядке @clients = Client.all
 	@clients = Client.order('created_at DESC') #вывод в обратном порядке, 
 	erb :bookings
 end
